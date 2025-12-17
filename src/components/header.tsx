@@ -7,12 +7,11 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { name: "About", href: "/" },
-  { name: "Department", href: "/" },
-  { name: "Bess", href: "/" },
-  { name: "Event", href: "/" },
-  { name: "Gallery", href: "/" },
-  { name: "Contact Us", href: "/" },
+  { name: "About", href: "/#about" },
+  { name: "Department", href: "/#department" },
+  { name: "Bess", href: "/#bess" },
+  { name: "Gallery", href: "/#gallery" },
+  { name: "Contact Us", href: "/#contacts" },
 ];
 
 function Header() {
@@ -90,7 +89,9 @@ function Header() {
             }  `}
           >
             {navLinks.map((link) => (
-              <li className="font-poppins cursor-pointer">{link.name}</li>
+              <li className="font-poppins cursor-pointer">
+                <Link href={link.href}>{link.name}</Link>
+              </li>
             ))}
           </ul>
         </div>
@@ -118,7 +119,8 @@ function Header() {
       <div>
         <div
           className={cn(
-            `absolute h-screen mt-3 bg-white w-full invisible duration-200 opacity-0`,
+            `absolute h-screen mt-3  bg-white w-full invisible duration-200 opacity-0`,
+            "bg-linear-to-t from-primary/50 to-white",
             {
               "visible border": menuOpen,
               "opacity-100": menuOpen,

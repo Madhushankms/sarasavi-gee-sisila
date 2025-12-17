@@ -44,7 +44,7 @@ export default function RootLayout({
       <body className={`${poppins.variable} ${abhaya.variable}   antialiased`}>
         <Header />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

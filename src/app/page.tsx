@@ -24,25 +24,27 @@ export default function Home() {
   };
 
   const images = [
-    "/images/gallery/6.jpg",
+    // "/images/gallery/manusha.jpeg",
+    // "/images/gallery/6.jpg",
     "/images/gallery/7.jpg",
-    "/images/gallery/11.jpg",
+    // "/images/gallery/11.jpg",
     "/images/gallery/22.jpg",
     "/images/gallery/33.jpg",
     "/images/gallery/44.jpg",
+    // "/images/gallery/mm.jpeg",
     "/images/gallery/55.jpg",
     "/images/gallery/1.jpg",
-    "/images/gallery/2.jpg",
+    // "/images/gallery/2.jpg",
     "/images/gallery/3.jpg",
     "/images/gallery/4.jpg",
-    "/images/gallery/5.jpg",
+    // "/images/gallery/5.jpg",
     "/images/gallery/6.jpg",
     "/images/gallery/7.jpg",
   ];
 
   const contactDetail = [
-    { icon: Phone, title: "Union President", info: "+94 xx xxx xxxx" },
-    { icon: Building2, title: "Head of Department", info: "+94 xx xxx xxxx" },
+    { icon: Phone, title: "Bess  President", info: "+94 78 853 7477" },
+    { icon: Building2, title: "Senior Treasurer", info: "+94 77 226 6488" },
     { icon: Mails, title: "Email Address", info: "bess@uom.lk" },
     {
       icon: Navigation,
@@ -62,6 +64,7 @@ export default function Home() {
         <Slider />
       </section>
       <section>
+        <div id="about" className="relative -top-20" />
         <div className="container px-4 lg:px-12 mx-auto pt-10 lg:pt-20">
           <p className="lg:text-8xl   md:text-6xl text-5xl text-primary font-bold text-center tracking-wide drop-shadow-sm  font-abhaya">
             Sarasavi Gee Sisila
@@ -77,20 +80,12 @@ export default function Home() {
             </p>
             <p>
               First held in 1993 by the undergraduates of the 5th batch of the
-              Department of Building Economics, Sarasavi Gee Sisila has since
-              grown into a landmark event at the university. The inaugural
-              edition was graced by legendary musicians such as Dr. Dayarathne
-              Ranathunge, Mrs. Amara Ranathunge, and Mr. Victor Rathnayake,
-              setting a high standard for excellence and artistry.
-            </p>
-            <p>
-              Over the years, Sarasavi Gee Sisila has evolved into one of the
-              largest and most iconic musical events within the university,
-              earning a reputation as the epitome of classical music in the
-              university community. Every edition continues to celebrate the
-              rich heritage of Sri Lankan music while providing a platform for
-              both legendary and emerging artists to captivate audiences with
-              unforgettable performances.
+              Department of Building Economics, Over the years, Sarasavi Gee
+              Sisila has evolved into one of the largest and most iconic musical
+              events within the university, and every edition continues to
+              celebrate the rich heritage of Sri Lankan music while providing a
+              platform for both legendary and emerging artists to captivate
+              audiences with unforgettable performances.
             </p>
           </div>
           <div className="mt-6.5 lg:mt-12">
@@ -99,6 +94,7 @@ export default function Home() {
         </div>
       </section>
       <section>
+        <div id="department" className="relative -top-20" />
         <div className="bg-[#F9FAFB] pt-11 pb-9  lg:pt-20">
           <div className="container px-4 lg:px-12 mx-auto lg:gap-15 md:gap-0  grid md:grid-cols-1 lg:grid-cols-2 items-center justify-center overflow-hidden  ">
             <div className=" order-2 lg:order-1  lg:py-10  ">
@@ -113,17 +109,17 @@ export default function Home() {
 
               <div className="space-y-4.5 lg:space-y-6  text-primary/50 max-w-5xl mx-auto mt-6 tracking-[1px]  font-poppins">
                 <p>
-                  The Building Economics Students’ Society (BESS), representing
-                  the students of the Department of Building Economics at the
-                  University of Moratuwa, has become a beacon of hope,
-                  leadership, and compassion.has become a beacon of hope,
-                  leadership, and compassion.
+                  The Department of Building Economics at the University of
+                  Moratuwa, established in 1983 under the patronage of the late
+                  Professor Siri Caldera, stands as Sri Lanka’s pioneering
+                  state-owned institution to offer undergraduate degree
+                  programme in Quantity Surveying.
                 </p>
                 <p>
-                  Through its wide-ranging welfare initiatives, community
-                  service projects, and educational programs, BESS has touched
-                  countless lives, brought positive changes, and inspired a
-                  sense of empowerment among those it serves.
+                  Renowned for its strong academic foundation, professional
+                  accreditations, and postgraduate offerings, the Department
+                  continues to shape industry-ready professionals and promote
+                  excellence in the built environment sector.
                 </p>
               </div>
               <div className="mt-4 lg:mt-6 lg:flex space-y-5 lg:space-y-0 gap-12">
@@ -162,6 +158,7 @@ export default function Home() {
         </div>
       </section>
       <section>
+        <div id="bess" className="relative -top-20" />
         <div className="pt-0 lg:pt-20">
           <div className="container px-4 lg:px-12 mx-auto  grid md:grid-cols-1 lg:grid-cols-2 items-center justify-center overflow-hidden  ">
             <div className="order-2 lg:order-1  bg-primary p-5 lg:p-15 flex  items-center justify-center gap-10  ">
@@ -200,6 +197,7 @@ export default function Home() {
         </div>
       </section>
       <section>
+        <div id="gallery" className="relative -top-20" />
         <div className="container px-4 lg:px-12 mx-auto pt-11 lg:pt-20 ">
           <p className="text-2xl lg:text-5xl  font-semibold text-primary font-poppins">
             Captured Moments
@@ -233,6 +231,7 @@ export default function Home() {
         </div>
       </section>
       <section>
+        <div id="contacts" className="relative -top-20" />
         <div className="bg-[#FAF8F5] pt-7.5">
           <div className="container px-4 lg:px-12 mx-auto   ">
             <p className="text-2xl lg:text-5xl  font-semibold text-primary font-poppins">
@@ -242,7 +241,7 @@ export default function Home() {
               Join hands with BESS for impact and service.
             </p>
             <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-15   mt-8">
-              <div className="order-2 lg:order-1 bg-white p-0 lg:p-10 rounded-2xl">
+              <div className="order-2 lg:order-1 bg-white p-4 lg:p-10 rounded-2xl">
                 <FormContact />
               </div>
               <div className="order-1 lg:order-2">
@@ -251,8 +250,8 @@ export default function Home() {
                     const Icon = detail.icon;
                     return (
                       <div key={index} className="flex gap-3 items-center ">
-                        <div className="h-11 w-11 rounded-[10px] bg-gold flex items-center justify-center">
-                          <Icon className="text-primary size-6" />
+                        <div className="h-11 w-11 shrink-0 rounded-[10px] bg-gold flex items-center justify-center">
+                          <Icon className="text-primary  size-6" />
                         </div>
                         <div>
                           <p className="font-poppins text-xl text-gold tracking-[2px]">
