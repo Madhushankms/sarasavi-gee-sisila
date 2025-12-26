@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { name: "About", href: "/#about" },
   { name: "Department", href: "/#department" },
-  { name: "Bess", href: "/#bess" },
+  { name: "BESS", href: "/#bess" },
   { name: "Gallery", href: "/#gallery" },
   { name: "Contact Us", href: "/#contacts" },
 ];
@@ -48,7 +48,7 @@ function Header() {
   return (
     <div
       className={cn(
-        "fixed w-full z-20 transition-all duration-500 ease-out",
+        "fixed w-full z-50 transition-all duration-500 ease-out",
         menuOpen
           ? "bg-primary py-4"
           : scrolled
@@ -75,7 +75,7 @@ function Header() {
                 ? "/images/gg.png"
                 : "/images/ff.png"
             }
-            className="w-20 lg:w-28 h-auto"
+            className="w-20 lg:w-28 h-auto cursor-pointer"
             width={500}
             height={500}
             alt="Sarasavi Geesisila Logo"
@@ -83,21 +83,27 @@ function Header() {
         </div>
 
         <div className="hidden lg:flex items-center gap-10">
-          <ul
-            className={`flex gap-10 text-[22px] ${
-              scrolled ? "text-white " : "text-white"
-            }  `}
-          >
+          <ul className="flex gap-10 text-[22px] text-white">
             {navLinks.map((link) => (
-              <li className="font-poppins cursor-pointer">
-                <Link href={link.href}>{link.name}</Link>
+              <li key={link.href} className="font-poppins">
+                <Link
+                  href={link.href}
+                  className="relative inline-block after:absolute after:left-0 after:-bottom-1
+                     after:h-0.5 after:w-full after:origin-left
+                     after:scale-x-0 after:bg-white after:transition-transform
+                     after:duration-300 after:ease-out
+                     hover:after:scale-x-100"
+                >
+                  {link.name}
+                </Link>
               </li>
             ))}
           </ul>
         </div>
+
         <div className="hidden lg:flex">
           <Link href="https://www.sarasavigeesisila.com/" target="_blank">
-            <Button className="text-[22px] rounded-[5px] font-poppins hover:text-white  bg-gold">
+            <Button className="text-[22px] rounded-full font-poppins hover:text-white  bg-gold">
               Reserve Seats
             </Button>
           </Link>

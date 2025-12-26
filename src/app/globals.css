@@ -127,15 +127,29 @@
   }
 }
 
-.mySwiper .swiper-slide img {
+.mySwiper2 .swiper-slide img {
   transform: scale(1);
   transition: transform 6s ease-in-out;
 }
 
-.mySwiper .swiper-slide-active img {
+.mySwiper2 .swiper-slide-active img {
   transform: scale(1.1);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.application-bullet-class {
+  width: 10px;
+  height: 10px;
+  background: #d9d9d9;
+  margin-left: 5px;
+  border-radius: 999px;
+  animation-duration: 200;
+}
+
+.application-bullet-active-class {
+  background-color: #001233;
+  animation-duration: 200;
 }

@@ -9,7 +9,7 @@ import { Autoplay, EffectFade } from "swiper/modules";
 function Slider() {
   return (
     <Swiper
-      className="mySwiper"
+      className="mySwiper2"
       effect="fade"
       modules={[Autoplay, EffectFade]}
       fadeEffect={{ crossFade: true }}

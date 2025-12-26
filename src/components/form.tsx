@@ -124,7 +124,7 @@ function FormContact() {
       <div className="pt-2 flex justify-end  font-poppins ">
         <Button
           type="submit"
-          className="bg-amber-400 rounded-[5px] text-md tracking-[1px]"
+          className="bg-amber-400 rounded-[5px] hover:text-white text-md tracking-[1px]"
         >
           Send Message
         </Button>
