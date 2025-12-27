@@ -6,6 +6,7 @@ import * as z from "zod";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { ToastContainer, toast } from "react-toastify";
 
 const contactFormSchema = z.object({
   firstName: z.string().min(1, { message: "First name is required" }),
@@ -41,9 +42,29 @@ function FormContact() {
     },
   });
 
-  const onSubmit = (values: ContactFormValues) => {
-    alert(JSON.stringify(values, null, 2));
-    reset();
+  const onSubmit = async (values: ContactFormValues) => {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) throw new Error(data.message);
+
+      // alert("Message sent successfully!");
+      console.log("Message sent successfully!");
+      toast.success("Message sent successfully!");
+      reset();
+    } catch (error) {
+      // alert("Failed to send message. Please try again.");
+      console.error("Failed to send message. Please try again.");
+      toast.error("Failed to send message. Please try again.");
+    }
   };
 
   return (
@@ -124,11 +145,13 @@ function FormContact() {
       <div className="pt-2 flex justify-end  font-poppins ">
         <Button
           type="submit"
+          disabled={isSubmitting}
           className="bg-amber-400 rounded-[5px] hover:text-white text-md tracking-[1px]"
         >
-          Send Message
+          {isSubmitting ? "Sending..." : "Send Message"}
         </Button>
       </div>
+      <ToastContainer />
     </form>
   );
 }

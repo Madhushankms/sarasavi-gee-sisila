@@ -1,9 +1,7 @@
-import { it } from "node:test";
 import React from "react";
 import { Phone, Mails, Navigation, Facebook, Youtube } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { hr } from "framer-motion/client";
 
 function Footer() {
   const contactDetail = [
@@ -64,7 +62,12 @@ function Footer() {
 
             <div className="flex gap-5 mt-6 lg:mt-8 justify-center lg:justify-start">
               {SocialIcon.map(({ icon: Icon, href }, index) => (
-                <Link href={href} target="_blank" rel="noopener noreferrer">
+                <Link
+                  key={index}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {" "}
                   <div
                     key={index}
@@ -79,8 +82,9 @@ function Footer() {
               ))}
             </div>
           </div>
-          {centerData.map((section) => (
+          {centerData.map((section, index) => (
             <div
+              key={index}
               className="
            mt-2 lg:mt-13"
             >
@@ -88,8 +92,11 @@ function Footer() {
                 {section.sub}
               </p>
               <div className="mt-2 lg:mt-6 space-y-0 lg:space-y-1">
-                {section.items.map((item) => (
-                  <p className="font-sm font-poppins text-[#C6C6C6] tracking-[1px] pt-px text-center lg:text-start cursor-pointer">
+                {section.items.map((item, index) => (
+                  <p
+                    key={index}
+                    className="font-sm font-poppins text-[#C6C6C6] tracking-[1px] pt-px text-center lg:text-start cursor-pointer"
+                  >
                     <Link href={item.href}>{item.title}</Link>
                   </p>
                 ))}
